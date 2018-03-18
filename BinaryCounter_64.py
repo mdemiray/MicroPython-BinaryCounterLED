@@ -1,12 +1,12 @@
 import machine
 import time
 
-pin_D0 = machine.Pin(14, machine.Pin.OUT)
-pin_D1 = machine.Pin(16,machine.Pin.OUT)
-pin_D2 = machine.Pin(5,machine.Pin.OUT)
-pin_D3 = machine.Pin(4,machine.Pin.OUT)
-pin_D4 = machine.Pin(0,machine.Pin.OUT)
-pin_D5 = machine.Pin(2,machine.Pin.OUT)
+pin_D0 = machine.Pin(16, machine.Pin.OUT)
+pin_D1 = machine.Pin(5,machine.Pin.OUT)
+pin_D2 = machine.Pin(4,machine.Pin.OUT)
+pin_D3 = machine.Pin(0,machine.Pin.OUT)
+pin_D4 = machine.Pin(2,machine.Pin.OUT)
+pin_D5 = machine.Pin(14,machine.Pin.OUT)
 
 
 
@@ -30,9 +30,8 @@ def DisplayBinary(decimalNumber):
     pin_D5.value(int(binaryString[0]))
 
 
-
-
-for i in range(0,64):
-    DisplayBinary(i)
-    time.sleep(0.5)
+while True:
+	for i in range(0,64):
+		DisplayBinary(i)
+		time.sleep(0.5)
 
